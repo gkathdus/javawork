@@ -1,0 +1,9 @@
+package hiding.acounts;
+
+// 은행 통장 계좌 자료형 생성
+public class Account {
+	public String ano;
+	public String owner;
+	public int balance;
+
+}

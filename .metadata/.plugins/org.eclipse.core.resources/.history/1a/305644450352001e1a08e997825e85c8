@@ -1,0 +1,11 @@
+package polymorphism.fruits;
+
+public class Peach {
+	
+	public Peach() {
+		name = "복숭아";
+		weight = "5 g";
+		price = 6000;
+	}
+
+}

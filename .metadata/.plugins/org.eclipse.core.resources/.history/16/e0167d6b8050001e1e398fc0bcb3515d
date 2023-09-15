@@ -1,0 +1,26 @@
+package reference.subjects;
+
+public class Subject {
+	// 필드
+	private String subjectName;
+	private int scorePoint;
+	
+	// getter, setter
+	public void setsubjectName(String subjectName) {
+		this.subjectName = subjectName;
+		
+	}
+	
+	public String getsubjectName() {
+		return subjectName;
+	}
+	
+	public void setscorePoint(int scorePoint) {
+		this.scorePoint = scorePoint;
+	}
+	
+	public int getscorePoint() {
+		return scorePoint;
+	}
+
+}

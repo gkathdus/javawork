@@ -1,0 +1,25 @@
+package arraycopy;
+
+public class Book {
+	private String bookname;
+	private String author;
+	
+	public Book(String bookname, String author) {
+		this.bookname = bookname;
+		this.author = author;
+	}
+	
+	public String getBookName () {
+		return bookname;
+	}
+	
+	public String getAuthor () {
+		return author;
+	
+	}
+	@Override
+	public String toString() {
+		return bookName + ", " + author;
+	}
+
+}

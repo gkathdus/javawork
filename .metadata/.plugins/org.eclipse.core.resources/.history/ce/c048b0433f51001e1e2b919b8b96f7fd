@@ -1,0 +1,12 @@
+package inheritance.statement;
+
+public class Alocohol extends Drink {
+	
+	float alcper; // 알콜 도수
+
+	public Alocohol(String name, int price, int count, float alcper) {
+		super(name, price, count);
+		this.alcper = alcper;
+	}
+
+}

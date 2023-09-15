@@ -1,0 +1,13 @@
+package polymorphism.fruits;
+
+public class Grape extends Fruit {
+	// 필드
+	public Grape() {
+		name = "포도";
+		weight = 5;
+		price = 6000;
+	}
+	
+	
+
+}

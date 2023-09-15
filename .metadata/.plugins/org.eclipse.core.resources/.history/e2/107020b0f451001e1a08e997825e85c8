@@ -1,0 +1,31 @@
+package customers;
+
+public class VIPCustomer extends Customer {
+	private int agentId;
+	double saleRatio;
+	
+	public VIPCustomer() {
+		customerGrade = "VIP";
+		saleRatio = 0.1;
+		bonusRatio = 0.05;
+	}
+	
+	// 구매 가격 = 가격 - (가격 * 구매할인율)
+	@Override
+	public int calcPrice(int Price) {
+		return super.calcPrice(Price);
+	}
+
+
+	public void setAgentId(int agentId) {
+		this.agentId = agentId;
+	}
+
+	@Override
+	public String showCustomerInfo() {
+		return super.showCustomerInfo() + "\n전문 상담원 ID는 "
+		+ agentId + "입니다.";
+	}
+	
+
+}

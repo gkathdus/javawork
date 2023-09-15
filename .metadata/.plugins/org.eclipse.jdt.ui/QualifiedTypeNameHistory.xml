@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.lang.Math"/>
+    <fullyQualifiedTypeName name="java.util.Date"/>
+    <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
+    <fullyQualifiedTypeName name="java.time.LocalDateTime"/>
+    <fullyQualifiedTypeName name="javax.swing.text.DateFormatter"/>
+    <fullyQualifiedTypeName name="java.time.format.DateTimeFormatter"/>
+    <fullyQualifiedTypeName name="java.time.LocalDate"/>
+    <fullyQualifiedTypeName name="java.time.LocalTime"/>
+    <fullyQualifiedTypeName name="Classes.constructor.person"/>
+    <fullyQualifiedTypeName name="Classes.Calculator"/>
+    <fullyQualifiedTypeName name="reference.circle.Point"/>
+    <fullyQualifiedTypeName name="reference.subjects.student"/>
+    <fullyQualifiedTypeName name="reference.subjects.Subject"/>
+    <fullyQualifiedTypeName name="protectedex.pack1.A"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="kr.or.iei.model.Soyeon"/>
+    <fullyQualifiedTypeName name="kr.or.iei.func.Exam"/>
+    <fullyQualifiedTypeName name="kr.or.iei.model.User"/>
+    <fullyQualifiedTypeName name="java.util.Calendar"/>
+    <fullyQualifiedTypeName name="java.time.temporal.ChronoUnit"/>
+</qualifiedTypeNameHistroy>
