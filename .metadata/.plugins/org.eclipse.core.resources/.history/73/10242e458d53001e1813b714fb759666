@@ -1,0 +1,6 @@
+package singleton.car;
+
+public class CarFactory {
+	private static CarFactory
+
+}
