@@ -23,4 +23,10 @@
     <fullyQualifiedTypeName name="java.lang.Math"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="objectequals.Employee"/>
+    <fullyQualifiedTypeName name="polymorphism.animals2.Tiger"/>
+    <fullyQualifiedTypeName name="polymorphism.animals2.Eagle"/>
+    <fullyQualifiedTypeName name="customers.Customers"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="customers.Customer"/>
 </qualifiedTypeNameHistroy>

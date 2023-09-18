@@ -5,8 +5,7 @@ public class Fruit {
 	// 필드
 	String name; // 과일 이름
 	String weight; // 무게(중량)
-	int price; // 가격
-	
+	int price;
 	public Fruit() {}
 	
 	public void showFruitInfo() {

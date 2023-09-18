@@ -1,9 +1,0 @@
-package Classes;
-
-// 참조(래퍼런스) 자료형
-public class Student { // 설계도
-	// 클래스 내부에서는 변수를 필드라고 함(필드 - field)
-	String name; // 학생 이름("함소연")
-	int studentid; // 학번(101)
-
-}
