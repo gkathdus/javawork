@@ -6,6 +6,7 @@ public class Student {
 	// 필드
 	private int studentId;
 	private String studentName;
+	
 	private Subject[] subjects;
 	
 	public Student(int studentId, String studentName) {

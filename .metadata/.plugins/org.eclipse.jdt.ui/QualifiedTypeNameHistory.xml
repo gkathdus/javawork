@@ -27,6 +27,11 @@
     <fullyQualifiedTypeName name="polymorphism.animals2.Tiger"/>
     <fullyQualifiedTypeName name="polymorphism.animals2.Eagle"/>
     <fullyQualifiedTypeName name="customers.Customers"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="customers.Customer"/>
+    <fullyQualifiedTypeName name="test.Car"/>
+    <fullyQualifiedTypeName name="arraylist.score.Subject"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="arraylist.generic.Fruit"/>
+    <fullyQualifiedTypeName name="interfacex.remocon.RemoteControl"/>
+    <fullyQualifiedTypeName name="java.lang.StringBuilder"/>
 </qualifiedTypeNameHistroy>
