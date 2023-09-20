@@ -2,6 +2,7 @@ package stringmethod;
 
 public class StringTest {
 
+	
 	public static void main(String[] args) {
 		// String 클래스를 사용하여 문자를 연결하면 내부의 
 		// 문자열이 변경되지 않아서 메모리가 많이 낭비됨

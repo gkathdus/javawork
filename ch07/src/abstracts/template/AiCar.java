@@ -2,7 +2,7 @@ package abstracts.template;
 
 public class AiCar extends Car {
 
-	@Override
+	@Override // 구현
 	public void drive() {
 		System.out.println("차량이 자율 주행합니다");
 		

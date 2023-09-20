@@ -11,6 +11,13 @@ public class CarTest {
 		
 		Car myCar = new AiCar();
 		myCar.run();
+		
+		// final 클래스 테스트
+		/*String msg = "야아야ㅑ양";
+		System.out.println(msg);
+		
+		Integer num = 100;
+		System.out.println(num);*/
 
 	}
 

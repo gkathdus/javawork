@@ -16,7 +16,6 @@
     <fullyQualifiedTypeName name="kr.or.iei.model.Soyeon"/>
     <fullyQualifiedTypeName name="kr.or.iei.func.Exam"/>
     <fullyQualifiedTypeName name="kr.or.iei.model.User"/>
-    <fullyQualifiedTypeName name="java.util.Calendar"/>
     <fullyQualifiedTypeName name="java.time.temporal.ChronoUnit"/>
     <fullyQualifiedTypeName name="singleton.car.CarFactory"/>
     <fullyQualifiedTypeName name="singleton.car.Car"/>
@@ -32,6 +31,13 @@
     <fullyQualifiedTypeName name="arraylist.score.Subject"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="arraylist.generic.Fruit"/>
-    <fullyQualifiedTypeName name="interfacex.remocon.RemoteControl"/>
     <fullyQualifiedTypeName name="java.lang.StringBuilder"/>
+    <fullyQualifiedTypeName name="java.util.Calendar"/>
+    <fullyQualifiedTypeName name="java.lang.StackOverflowError"/>
+    <fullyQualifiedTypeName name="interfacex.remocon.RemoteControl"/>
+    <fullyQualifiedTypeName name="java.text.DateFormat.Field"/>
+    <fullyQualifiedTypeName name="java.lang.reflect.Constructor"/>
+    <fullyQualifiedTypeName name="java.lang.reflect.Method"/>
+    <fullyQualifiedTypeName name="java.lang.reflect.Field"/>
+    <fullyQualifiedTypeName name="java.lang.NumberFormatException"/>
 </qualifiedTypeNameHistroy>
