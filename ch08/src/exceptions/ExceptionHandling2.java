@@ -8,6 +8,7 @@ public class ExceptionHandling2 {
 			int count = data.length();
 			System.out.println("문자 수: " + count);	
 		}catch(NullPointerException e) {
+			// 예외 처리 구문
 			System.out.println(e.getMessage());
 			e.printStackTrace(); // 경로를 추적해서 에러를 출력
 		}
