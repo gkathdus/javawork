@@ -6,7 +6,14 @@ import java.util.Collections;
 public class ArrayTest {
 	
 	public static void main(String[] args) {
+		// Arrays 클래스 - 배열을 쉽고 효율적으로 처리하는 기능
 		Integer[] num1 = {3, 1, 2, 4, 5};
+		
+		System.out.println(num1); // 주소가 나옴
+		System.out.println(Arrays.toString(num1));
+		
+		/*for(Integer num : num1)
+			System.out.println(num);*/
 		
 		//Arrays.toString() - 객체 그대로(리스트형) 출력
 		System.out.println(Arrays.toString(num1));

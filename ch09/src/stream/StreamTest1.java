@@ -8,12 +8,12 @@ import java.util.stream.Stream;
 public class StreamTest1 {
 
 	public static void main(String[] args) {
-		// List에 객체 생성해서 저장함
+		// ArrayList에 객체 생성해서 저장함
+		List<String> list = Arrays.asList("LG", "Samsung", "현대");
 		/*List<String> list = new ArrayList<>();
 		list.add("LG");
 		list.add("Samsung");
 		list.add("현대");*/
-		List<String> list = Arrays.asList("LG", "Samsung", "현대");
 		
 		// comStream 생성 후 한 번만 사용되고 다시 사용하려면 재생성을 해야함
 		Stream<String> comStream = list.stream(); // List의 모든 객체를 가져옴

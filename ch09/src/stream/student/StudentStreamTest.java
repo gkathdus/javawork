@@ -1,4 +1,4 @@
-package stream;
+package stream.student;
 
 import java.util.Arrays;
 import java.util.List;
@@ -41,6 +41,7 @@ public class StudentStreamTest {
 		list.stream().filter(std -> std.getScore() >= 90)
 			.map(std -> std.getName())
 			.forEach(s -> System.out.println(s));
+		
 	}
 
 }
