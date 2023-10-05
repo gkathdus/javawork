@@ -17,6 +17,7 @@ public class EcoServer {
 		System.out.println("서버를 종료하려면 q또는 Q를 입력하고 엔터를 누르세요");
 		System.out.println("=========================================");
 		
+		// TCP 서버 시작
 		startServer();
 		
 		Scanner scanner = new Scanner(System.in);
@@ -28,6 +29,7 @@ public class EcoServer {
 		
 		scanner.close();
 		
+		// TCP 서버 종료
 		stopServer();
 		
 	}

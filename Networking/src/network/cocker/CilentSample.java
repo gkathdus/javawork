@@ -10,7 +10,7 @@ public class CilentSample {
 		// Socket 객체 생성
 		try {
 			// Socket 객체 생성 및 연결 요청
-			Socket socket = new Socket("localhost", 50001);
+			Socket socket = new Socket("localhost", 8001);
 			System.out.println("[클라이언트] 연결 성공");
 			
 			socket.close();

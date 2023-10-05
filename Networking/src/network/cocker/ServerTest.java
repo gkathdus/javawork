@@ -6,6 +6,7 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.Scanner;
 
+// TCP(Transmission Control Protocol) 네트워킹
 public class ServerTest {
 	
 	 private static ServerSocket serverSocket;
@@ -34,10 +35,10 @@ public class ServerTest {
 		Thread thread = new Thread() {
 		public void run() {
 			try {
-				serverSocket = new ServerSocket(50001);
+				serverSocket = new ServerSocket(8001);
 				System.out.println("[서버] 시작됨");
 				
-			while(true) {
+			while(true) { // 항상 대기
 				System.out.println("[서버] 연결 요청을 기다림");
 				Socket socket = serverSocket.accept();
 				
