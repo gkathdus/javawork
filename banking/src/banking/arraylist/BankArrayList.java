@@ -17,9 +17,9 @@ public class BankArrayList {
 		
 		while(sw) {
 			try {
-			System.out.println("==================================================");
-			System.out.println("1. 계좌 생성 | 2. 계좌 목록 | 3. 예금 | 4. 출금 | 5. 종료");
-			System.out.println("==================================================");
+			System.out.println("============================================================================");
+			System.out.println("1. 계좌 생성 | 2. 계좌 목록 | 3. 예금 | 4. 출금 | 5. 계좌 삭제 | 6. 계좌 검색 | 7. 종료");
+			System.out.println("============================================================================");
 			
 			//메뉴 선택
 			int selectNo = Integer.parseInt(scanner.nextLine());
@@ -32,6 +32,10 @@ public class BankArrayList {
 			}else if(selectNo == 4) {
 				withdraw();
 			}else if(selectNo == 5) {
+				removeAccount();
+			}else if(selectNo == 6) {
+				selectAccount();
+			}else if(selectNo == 7) {
 				sw = false;
 			}else {
 				System.out.println("지원되지 않는 기능입니다. 다시 입력해 주세요.");
@@ -48,9 +52,9 @@ public class BankArrayList {
 	}
 	
 	private static void createAccount() {
-		System.out.println("---------------------------------------");
-		System.out.println("계좌 생성");
-		System.out.println("---------------------------------------");
+		System.out.println("=======================================");
+		System.out.println("                계좌 생성                ");
+		System.out.println("=======================================");
 		
 		while(true) {
 		System.out.println("계좌 번호(형식: 00-00-000): ");
@@ -84,9 +88,9 @@ public class BankArrayList {
 	}
 	}
 	private static void getAccountList() {
-		System.out.println("---------------------------------------");
+		System.out.println("=======================================");
 		System.out.println("                계좌 목록                ");
-		System.out.println("---------------------------------------");
+		System.out.println("=======================================");
 		
 		// 계좌 목록 조회
 		for(int i=0; i<accountList.size(); i++) {
@@ -99,9 +103,9 @@ public class BankArrayList {
 	}
 	
 	private static void deposit() {
-		System.out.println("---------------------------------------");
+		System.out.println("=======================================");
 		System.out.println("                입금액               ");
-		System.out.println("---------------------------------------");
+		System.out.println("=======================================");
 		
 		while(true) {
 			System.out.print("계좌번호: ");
@@ -125,33 +129,100 @@ public class BankArrayList {
 	}
 	
 	private static void withdraw() {
-		System.out.println("---------------------------------------");
-		System.out.println("                출금액            ");
-		System.out.println("---------------------------------------");
+		System.out.println("========================================");
+		System.out.println("                  출금액                  ");
+		System.out.println("========================================");
 		
 		while(true) {
 		System.out.print("계좌번호: ");
 		String ano = scanner.nextLine();
 		
+		if(findAccount(ano) != null) {
 			while(true) {
-				if(findAccount(ano) != null) {
 					System.out.println("출금액: ");
+					Account account = findAccount(ano);
 					int money = Integer.parseInt(scanner.nextLine());
 		
-					Account account = findAccount(ano);
 					if(money > account.getBalance()) { // 출금액이 잔고보다 많으면
 						System.out.println("잔액이 부족합니다. 다시 입력해 주세요.");
 						
-					account.setBalance(account.getBalance() - money);
-					System.out.println("정상 처리되었습니다.");
-					break;
+					}else {
+						account.setBalance(account.getBalance() - money);
+						System.out.println("잔액 " + account.getBalance());
+						break;
 					}
-				}else {
-					System.out.println("계좌 없습니다. 다시 입력해 주세요.");
-					break;
-				}	
-			}
-	   }	
+					
+			        }
+					}else {
+						System.out.println("계좌 없습니다. 다시 입력해 주세요.");
+					}
+					break;	
+					}
+					
+   }
+	
+	   //계좌 삭제
+	   private static void removeAccount() {
+	      
+	      System.out.println("======================================================");
+	      System.out.println("                     계좌 삭제                          ");
+	      System.out.println("======================================================");
+	      
+	      while(true) {
+	         System.out.print("계좌 번호 : ");
+	         String ano = scanner.nextLine();
+	         
+	         
+	         if(findAccount(ano) !=null) { // 찾는 계좌가 없으면 
+	            for(int i = 0 ; i <accountList.size();i++) {               
+	               String dbAno = accountList.get(i).getAno();
+	               if(dbAno.equals(ano)) {
+	                  accountList.remove(i); //계좌삭제
+	                  System.out.println("결과 : 계좌가 삭제되었습니다.");
+	                  break;
+	               }               
+	            }//for 끝
+	            break;
+	         }else{            
+	            System.out.println("계좌가 존재하지 않습니다. 다시 입력해주세요");
+	         }         
+	      }//whlie 끝
+	      
+	   }
+	   
+    // 계좌 검색
+    private static void selectAccount() {
+    	// 계좌번호와 일치하는 계좌 검색
+    	System.out.println("=====================================================");
+	    System.out.println("                    계좌 검색                          ");
+	    System.out.println("=====================================================");
+	    
+	    while(true) {
+	         System.out.print("계좌 번호 : ");
+	         String ano = scanner.nextLine();
+	         
+	         
+	         if(findAccount(ano) !=null) { // 찾는 계좌가 없으면 
+	            for(int i = 0 ; i <accountList.size();i++) {               
+	               String dbAno = accountList.get(i).getAno();
+	               if(dbAno.equals(ano)) {
+	            	   
+	                Account account = accountList.get(i);
+	                  
+	                System.out.print("계좌 번호: " + account.getAno() + "\t");
+	      			System.out.print("예금주: " + account.getOwner() + "\t");
+	      			System.out.println("잔고: " + account.getBalance());
+	      			break;
+	                  
+	               }               
+	            }//for 끝
+	            break;
+	         }else{            
+	            System.out.println("계좌가 존재하지 않습니다. 다시 입력해주세요");
+	         }         
+	      }//whlie 끝
+	    
+	    
     }
 
 	private static Account findAccount(String ano) {

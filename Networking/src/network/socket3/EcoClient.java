@@ -1,5 +1,4 @@
-
-package network.socket2;
+package network.socket3;
 
 import java.io.IOException;
 import java.io.InputStream;
