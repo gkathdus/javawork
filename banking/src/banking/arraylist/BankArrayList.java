@@ -4,7 +4,8 @@ import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.regex.Pattern;
 
-import banking.array.Account;
+import banking.domain.Account;
+
 
 public class BankArrayList {
 	
@@ -60,7 +61,7 @@ public class BankArrayList {
 		System.out.println("계좌 번호(형식: 00-00-000): ");
 		String ano = scanner.nextLine();
 		
-		String regExp = "\\d{2}-\\d{2}-\\d{3}";
+		String regExp = "\\d{2}-\\d{2}-\\d{3}"; // 정규 표현식
 		boolean result = Pattern.matches(regExp, ano);
 		
 		if(result) {
@@ -68,25 +69,34 @@ public class BankArrayList {
 			if(findAccount(ano) != null) {
 				System.out.println("이미 존재하는 계좌 번호입니다. 다른 계좌 번호를 입력해 주세요.");
 			}else { // 중복 계좌 없으면
-				System.out.println("예금주: ");
-				String owner = scanner.nextLine();
-				
-				System.out.println("입금액: ");
-				int balance = Integer.parseInt(scanner.nextLine());
-				
-				// 입력 받은 내용을 매개변수로 계좌 생성함
-				Account newAccount = new Account(ano, owner, balance);
-				accountList.add(newAccount);
-				System.out.println("결과: 계좌가 생성되었습니다.");
+				while(true) {
+					System.out.println("예금주: ");
+					String owner = scanner.nextLine();
+					
+					regExp = "[a-zA-Z가-힣]+"; // 영어, 한글만
+					result = Pattern.matches(regExp, owner);
+					if(result) {
+						System.out.println("입금액: ");
+						int balance = Integer.parseInt(scanner.nextLine());
+						
+						// 입력 받은 내용을 매개변수로 계좌 생성함
+						Account newAccount = new Account(ano, owner, balance);
+						accountList.add(newAccount);
+						System.out.println("결과: 계좌가 생성되었습니다.");
+						break;
+						
+					}else {
+						System.out.println("계좌주는 한글과 영문만 가능합니다. 다시");
+					}
+				} // 내부 while
 				break;
 			}
 		
 		}else {
 			System.out.println("올바르지 않은 형식으로 입력하였습니다. 다시해");
 		}
-		
 	}
-	}
+}
 	private static void getAccountList() {
 		System.out.println("=======================================");
 		System.out.println("                계좌 목록                ");

@@ -2,6 +2,8 @@ package banking.array;
 
 import java.util.Scanner;
 
+import banking.domain.Account;
+
 public class BankMain {
 	static Account[] accounts = new Account[100];
 	static Scanner scanner = new Scanner(System.in);
