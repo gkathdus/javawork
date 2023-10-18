@@ -14,6 +14,7 @@ public class JDBCUtil {
 	static String user = "c##mydb";
 	static String password = "pwmydb";
 	
+	
 	// db 연결 메서드
 	public static Connection getConnection() {
 		try {

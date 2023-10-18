@@ -224,7 +224,10 @@ public class AccountDAO {
 	         System.out.print("계좌 번호 : ");
 	         String ano = scanner.nextLine();
 	         
-	         if(findAccount(ano) !=null) { // 찾는 계좌가 없으면 
+	         if(findAccount(ano) !=null) { // 찾는 계좌가 없으면
+	        	 System.out.println("1. ok | 2. cancel");
+	        	 String menuNo = scanner.nextLine();
+	        	 if(menuNo.equals("1")) {
 	        	 try {
 						conn = JDBCUtil.getConnection();
 						String sql = "DELETE FROM account WHERE ano = ?";
@@ -237,8 +240,10 @@ public class AccountDAO {
 					}finally {
 						JDBCUtil.close(conn, pstmt);
 					}
-	        	 	System.out.println("삭제 완료");
-	                break;
+	        	 }else {
+	        		 System.out.println("삭제를 취소합니다.");
+	        	 }
+	        	 break;
 	            
 	         }else{            
 	            System.out.println("계좌가 존재하지 않습니다. 다시 입력해주세요");
