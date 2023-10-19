@@ -255,7 +255,17 @@ public class BoardExample2 {
 			try {
 				String sql = "TRUNCATE TABLE board";
 				pstmt = conn.prepareStatement(sql);
+				
 				// sql 실행
+				pstmt.executeUpdate();
+				
+				//글 번호가 삭제 후에 이어진 번호 출력되는 문제 발생 (1부터 초기화)
+				sql = "DROP SEQUENCE seq";
+				pstmt = conn.prepareStatement(sql);
+				pstmt.executeUpdate();
+				
+				sql = "CREATE SEQUENCE seq NOCACHE";
+				pstmt = conn.prepareStatement(sql);
 				pstmt.executeUpdate();
 				
 				pstmt.close();
