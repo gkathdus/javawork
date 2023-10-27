@@ -43,6 +43,7 @@ public class UserInsertTest {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}finally {
+			
 				if(conn != null) {
 				try {
 					conn.close();
